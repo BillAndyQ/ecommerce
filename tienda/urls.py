@@ -1,7 +1,7 @@
 from django.urls import path
-from . import views
+from .views import home
 
 urlpatterns = [
-    path('', views.home, name='home'),  # Cambia 'home' por la vista que desees
+    path('', home.home, name='home'),  # Cambia 'home' por la vista que desees
     # Otras rutas de la app
 ]

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'adminApp',
-    'tienda'
+    'tienda',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ecommerce',
+        'USER': 'postgres',
+        'PASSWORD': 'deikyt2002',
+        'HOST': 'localhost',  # O la IP o nombre del servidor donde esté PostgreSQL
+        'PORT': '5432',       # El puerto por defecto para PostgreSQL
     }
 }
 
